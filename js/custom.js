@@ -14,3 +14,13 @@ data.forEach((el) => {
 
 console.log(tags);
 frame.innerHTML = tags;
+
+//append로 동적 DOM생성
+//기존 선택자 안쪽의 요소들을 유지하면서 뒤쪽에 새롭게 추가
+//appned의 인수값으로는 문자값이 아닌 실제 Element Node형태로 전달
+const asideEl = document.createElement("aside");
+asideEl.classList.add("modal");
+asideEl.innerText = "Modal";
+//console.dir(asideEl);
+
+frame.append(asideEl);
